@@ -1,0 +1,21 @@
+# idea ignore
+.idea/
+.idea/*
+*.ipr
+*.iml
+*.iws
+*.xml
+
+# package ignore (optional)
+# *.jar
+# *.war
+# *.zip
+# *.tar
+# *.tar.gz
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+
+node_modules/*
