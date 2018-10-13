@@ -84,3 +84,7 @@ function callback(){
 xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 ```
 与GET不同，POST不会限制发送给服务器的净荷的大小，而且POST请求不会保证是幂等的。
+
+##### 2.6_关于Ajax的安全
+Ajax不能跨域加载别的域的内容。
+> 因为XMLHttpRequest对象要受制于浏览器的安全“沙箱”。XMLHttpRequest对象请求的所有资源都必须与调用脚本在同一个域内。这个安全限制使得XMLHttpRequest对象不能请求脚本所在域之外的资源。
