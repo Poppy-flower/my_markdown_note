@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function handleResponse(){
+            alert('this function is called from server.html!');
+        }
+    </script>
+</head>
+<body>
+    <h1>Remote script with an IFRAME</h1>
+    <iframe
+            src="blank.html"
+            frameborder="0"
+            id="beforexhr"
+            name="beforexhr"
+            style="width:0px;height:0px;border:0px;"
+    ></iframe>
+
+    <a href="server.html" target="beforexhr">call the server</a>
+</body>
+</html>
