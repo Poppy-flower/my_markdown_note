@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Stack(){
+            /**
+             *  进栈
+             *  出栈
+             *  栈的长度
+             *  栈是否为空
+             *  清空栈
+             *  返回栈顶元素
+             */
+            let items = [];
+
+            this.push = function(element){
+                items.push(element);
+            }
+
+            this.pop = function(){
+                items.pop();
+            }
+
+            this.size = function(){
+                return items.length;
+            }
+
+            this.isEmpty = function(){
+                return items.length == 0;
+            }
+
+            //返回栈顶元素
+            this.peek = function(){
+                return items[items.length - 1];
+            }
+
+            this.clear = function(){
+                items = [];
+            }
+
+            this.print = function(){
+                console.log(items.toString());
+            }
+        }
+    </script>
+</body>
+</html>
