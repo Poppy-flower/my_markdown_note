@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     * 优先对列分为两种：
+     * 1 正常插入，按照优先级输出
+     * 2 按照优先级插入，正常输出（算法实现）
+     * @constructor
+     */
+    function PriorityQueue(){
+        let items = [];
+
+        function QueueElement(element, priority){
+            this.element = element;
+            this.priority = priority;
+        }
+
+        this.enqueue = function(element, priority){
+            let queueElement = new QueueElement(element, priority);
+            let added = false;
+            for(let i = 0; i < items.length; i++){
+                if(queueElement.priority < items[i].priority){
+                    items.slice(i, 0, queueElement);
+                    added = true;
+                    break;
+                }
+            }
+            if(!added){
+                items.push(queueElement);
+            }
+        }
+
+        this.print = function(){
+            for(let i = 0; i < items.length; i++){
+                console.log(`${items[i].element}---${items[i].priority}`);
+            }
+        }
+    }
+</script>
+</body>
+</html>
