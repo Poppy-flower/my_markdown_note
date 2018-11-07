@@ -1,5 +1,5 @@
 /**
- *
+ * 判断日期有效性，输入（y, m, d）输出true or false
  * @param y
  * @param m
  * @param d
@@ -41,6 +41,7 @@ function checkDay(y, m, d){
     }
 }
 
+//检查年月日输入是否有效
 function checkDate(y, m, d){
     if(checkYear(y) && checkMonth(m) && checkDay(y, m, d)){
         return true;
@@ -48,4 +49,5 @@ function checkDate(y, m, d){
     return false;
 }
 
+//test code
 console.log(checkDate(2006, 10, 31));   //true
